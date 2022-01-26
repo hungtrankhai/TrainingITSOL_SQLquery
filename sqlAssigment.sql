@@ -47,7 +47,7 @@ where student.scholarship > 100000
 order by faculty_id desc
 -- 8. Sinh viên có h?c b?ng t? 150000 tr? lên và sinh ? Hà N?i
 select * from student
-where student.scholarship > 150000 and student.hometown = 'Hà N?i'
+where student.scholarship > 150000 and student.hometown = 'Hà Nội'
 -- 9. Nh?ng sinh viên có ngày sinh t? ngày 01/01/1991 ??n ngày 05/06/1992   ???  to_date(date, 'type')
 select * from student 
 where student.birthday between to_date('01/01/1991','DD/MM/YYYY') and to_date('05/06/1992','DD/MM/YYYY');
@@ -164,7 +164,7 @@ where student.scholarship = (select MAX(student.scholarship) from student)
 -- 1. Sinh viên có n?i sinh ? Hà N?i và sinh vào tháng 02      to_char(date, 'type')
 select student.name, student.hometown, student.birthday
 from student
-where student.hometown = 'Hà N?i' and to_char(student.birthday, 'MM') =2
+where student.hometown = 'Hà Nội' and to_char(student.birthday, 'MM') =2
 
 -- 2. Sinh viên có tu?i l?n h?n 20
 -- oracle extract
